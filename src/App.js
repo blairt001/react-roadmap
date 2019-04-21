@@ -12,7 +12,9 @@ class App extends Component {
    or server requests. Working with a state’s component normally
    involves setting a component’s default state,
    accessing the current state and updating the state.
+  We pass reference by using the 'this' keyword.
    */
+  
   state = {
     peoples : [
       {name: 'Tony', age: 24},
@@ -20,13 +22,16 @@ class App extends Component {
       {name: 'Tracy', age: 22}
     ]
   }
+  switchBlairHandler = () => {
+    console.log('Was Clicked');
+  }
   render() {
     return (
       <div className="App">
         <h1>Hi , I'm a React App</h1>
         <p>So Great</p>
         <People name={this.state.peoples[0].name} Age={this.state.peoples[0].age}/>
-        <button>Switch Name</button>
+        <button onClick={this.switchBlairHandler}>Switch Name</button>
         <People name={this.state.peoples[1].name} Age={this.state.peoples[1].age}>My Favorites: React, Vue, Node, Java</People>
         <People name={this.state.peoples[2].name} Age={this.state.peoples[2].age}/>
       </div>

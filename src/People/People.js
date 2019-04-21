@@ -11,7 +11,7 @@ The value of a prop is always a function */
 const people = (props) => {
     return (
         <div>
-            <p>Hey my people, how are you doing. I am {props.name} and I'm {Math.floor(Math.random()*10)} years old.</p>
+            <p>Hey my people, how are you doing. I am {props.name} and I'm {props.Age} years old.</p>
              <p>{props.children}</p>
         </div>
     )   
