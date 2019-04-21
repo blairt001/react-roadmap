@@ -20,10 +20,22 @@ class App extends Component {
       {name: 'Tony', age: 24},
       {name: 'Steve', age: 26},
       {name: 'Tracy', age: 22}
-    ]
+    ],
+    onotherState: 'My Other State'
   }
   switchBlairHandler = () => {
-    console.log('Was Clicked');
+    // console.log('Was Clicked');
+
+    //lets manipulate the states
+    // never change the state directly like below
+    /* this.state.peoples[0] = "Blairman"; */
+
+    this.setState( {peoples: [
+      {name: 'Tony', age: 25},
+      {name: 'Steve', age: 27},
+      {name: 'Tracy', age: 21}
+    ],})
+
   }
   render() {
     return (
