@@ -47,7 +47,7 @@ Keys example:
     
 It is not mandatory write JSX, you can write the whole code in `React.createElement` but I personally won't recommend that practice.
 
-# React Components, What is a Component?
+# React Components
 
 A component is a small reusable chunk of code that is responsible for one job. Usually to render some HTML.
 We can use multiple JSX in a component.
@@ -89,7 +89,7 @@ export can be done in the beginning as shown above or end using "export default 
           ReactDOM.render(<ProfilePage/>,document.getElementById(‘app’));
           
           
-# Props. What are Props?
+# Props
 
 Information that gets passed from one component to another is known as ‘props’.
 A component’s props is an object. It holds information about that component. To see a component’s props object, you use the expression `this.props` as shown in the code below:
