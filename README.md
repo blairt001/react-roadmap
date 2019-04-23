@@ -4,68 +4,31 @@ It contains well commented code that explains what happens and why.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-### So Why React?
+# Why React?
   React is a JavaScript library aimed to create user interfaces and used extensively by social networking platforms like       Facebook and Instagram to name a few.. It is fast, responsive, modular, we can create reusable files. It is scalable and     flexible.It is based on components.
 
-## React Virtual DOM
-. DOM(Document Object Model) is the UI components, like elements, attributes.
-. Virtual DOM is node tree listing of components, which is light weight in memory representation of real DOM.
-. The render() method in react creates the Virtual DOM.
-. Each time the underlying data changes, new virtual DOM is created, comparing differences between previous virtual DOM and     only the changes are updated in real DOM.
-  So, the special thing about `ReactDOM.render()` is that it only updates DOM elements that have changed. Cool!!!
+# React Virtual DOM
+   DOM(Document Object Model) is the UI components, like elements, attributes.
+   Virtual DOM is node tree listing of components, which is light weight in memory representation of real DOM.
+   The render() method in react creates the Virtual DOM.
+   Each time the underlying data changes, new virtual DOM is created, comparing differences between previous virtual DOM and    only the changes are updated in real DOM.
+   So, the special thing about `ReactDOM.render()` is that it only updates DOM elements that have changed. Cool!!!
   
- ## JSX?
-. JavaScript Syntax Extension, JSX is not valid JavaScript that browsers can read. It’s a JavaScript file that contains JSX     code, very similar to HTML and the file have to be complied before it reaches web browser, with JSX complier that             translates the JSX into JavaScript.
-.JXS element are treated as JavaScript expression, they can be saved as variable, passed to function or stored in an object     or array.
-. Each JSX expression must have exactly one outermost element. Usually wrap the JSX expression in a <div></div>.
-. Rendering JSX element means to make it appear on screen. We render JSX expression like this:
+ # JSX?
+ JavaScript Syntax Extension, JSX is not valid JavaScript that browsers can read. It’s a JavaScript file that contains JSX     code, very similar to HTML and the file have to be complied before it reaches web browser, with JSX complier that             translates the JSX into JavaScript.
+ JXS element are treated as JavaScript expression, they can be saved as variable, passed to function or stored in an object     or array.
+ Each JSX expression must have exactly one outermost element. Usually wrap the JSX expression in a <div></div>.
+  Rendering JSX element means to make it appear on screen. We render JSX expression like this:
       
           import React from ‘react’;
           import ReactDOM from ‘react-dom’;
           ReactDOM.render(<h1>Hi Blairt</h1>, document.getElementById(‘app’));
   
- . From the above we can see that; 
+  From the above we can see that; 
        ReatDOM is javascript library.
- . In HTML, it’s common to use class as an attribute name but in JSX we cannot use the word class. We have to use className      instead. Coz class is reserved word in javaScript and JSX is converted to javaScript.
- . In HTML its optional to include forward slash for self-closing tags like br, img, input, etc but not in JSX.
- . Curly braces are markers that signal the beginning and end of a JavaScript:
+  In HTML, it’s common to use class as an attribute name but in JSX we cannot use the word class. We have to use className      instead. Coz class is reserved word in javaScript and JSX is converted to javaScript.
+  In HTML its optional to include forward slash for self-closing tags like br, img, input, etc but not in JSX.
+  Curly braces are markers that signal the beginning and end of a JavaScript:
 
           const name = "Tony Blair';
           ReactDOM.render(<h1>{name}</h1>, document.getElementById(‘app’));
@@ -195,7 +158,7 @@ For example,
                       return <button>THIS IS BIG BUTTON HERE</button>;
                       }}
                       
-# Example 1
+### Example 1
 
       <BigButton>
       I am a child of BigButton.
@@ -209,7 +172,7 @@ If nobody passes any text to component, then component display will be blank. It
                       }}
                       Example.defaultProps = { text: ‘yo’ };
                       
-# State. What is a State?
+# State
 
 A React component can access dynamic information in two ways: `props and state`.
 Unlike props, a component’s state is not passed in from the outside. A component decides its own state.
@@ -330,7 +293,7 @@ Stateless functional component example:
                         return <img src=’tkl_image.jpg’ />;
                         }
                         
-# Styles. What are Styles?
+# Styles
 
 We are know styles from html. Here are some ways of using styles:
 
@@ -355,7 +318,7 @@ In regular JavaScript, style names are written in `hyphenated-lowercase`. In Rea
         
 One style can be shared across multiple components separating presentation components from display components.
 
-# Prototype. What is Proptype?
+# Prototype
 
 Proptype is reacts inbuilt type checking ability. Here is an example:
 
@@ -368,29 +331,34 @@ Proptype is reacts inbuilt type checking ability. Here is an example:
           message: React.PropTypes.string
           };
           
-# Forms. What are Forms?
+# Forms
 
 We all know forms from html. In react, for certain cases, it’s fine to have a form that is really just an input field. This is because, unlike in the traditional form paradigm, in React you re-send your form on every single character change. That removes the need to ever “submit” anything.
 
-# Lifecycle methods. What are Lifecycle methods?
+# Lifecycle methods
 
 Lifecycle methods are methods that get called at certain moments in a react component’s life.
 There are three mounting lifecycle methods, when a component mounts, it automatically calls these three methods, in order:
 
-### 1. componentWillMount: 
+## 1. componentWillMount: 
 When a component renders for the first time only, componentWillMount gets called right before render.
 render.
-### 2. componentDidMount: 
+## 2. componentDidMount: 
 When a component renders for the first time, componentDidMount gets called right after the HTML from render has finished loading.
 If your React app uses AJAX to fetch initial data from an API, then componentDidMount is the place to make that AJAX call. It is a good place to connect a React app to external applications, such as web APIs or JavaScript frameworks or to set timers using setTimeout or setInterval.
 There are five updating lifecycle methods, which is called in this order whenever a component instance is updated:
-`componentWillReceiveProps`: When a component instance updates, componentWillReceiveProps gets called before the rendering only if the component will receive props.
-`shouldComponentUpdate`: shouldComponentUpdate automatically receives two arguments: nextProps and nextState. It’s typical to compare nextProps and nextState to the current this.props and this.state. If shouldComponentUpdate returns true, then nothing noticeable happens. But if shouldComponentUpdate returns false, then the component will not update.
-`componentWillUpdate`: componentWillUpdate gets called in between shouldComponentUpdate and render.It receives two arguments: nextProps and nextState. We cannot call this.setState from componentWillUpdate. Its main purpose is to interact with things outside like checking the window size or interacting with an API.
-`componentDidUpdate`: componentDidUpdate automatically gets passed two arguments: prevProps and prevState. prevProps and prevState are references to the component’s props and state before the current updating period began. You can compare them to the current props and state.
-`Render`
+### a. componentWillReceiveProps:
+When a component instance updates, componentWillReceiveProps gets called before the rendering only if the component will receive props.
+### b. shouldComponentUpdate:
+shouldComponentUpdate automatically receives two arguments: nextProps and nextState. It’s typical to compare nextProps and nextState to the current this.props and this.state. If shouldComponentUpdate returns true, then nothing noticeable happens. But if shouldComponentUpdate returns false, then the component will not update.
+### c. componentWillUpdate: 
+componentWillUpdate gets called in between shouldComponentUpdate and render.It receives two arguments: nextProps and nextState. We cannot call this.setState from componentWillUpdate. Its main purpose is to interact with things outside like checking the window size or interacting with an API.
+### d. componentDidUpdate:
+componentDidUpdate automatically gets passed two arguments: prevProps and prevState. prevProps and prevState are references to the component’s props and state before the current updating period began. You can compare them to the current props and state.
+### Render
+
 Finally, there is only one unmounting lifecycle method:
-### 3. componentWillUnmount:
+## 3. componentWillUnmount:
 It gets called right before a component is removed from the DOM.
 Thanks for reading upto this far. Happy Coding React.
 
