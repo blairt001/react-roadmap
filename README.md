@@ -2,7 +2,7 @@
 This project is created to guide react beginners in starting development using react.
 It contains well commented code that explains what happens and why.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To create a react application , follow the guidelines here: [Create React App](https://github.com/facebook/create-react-app).
 
 # Why React?
   React is a JavaScript library aimed to create user interfaces and used extensively by social networking platforms like       Facebook and Instagram to name a few.. It is fast, responsive, modular, we can create reusable files. It is scalable and     flexible.It is based on components.
